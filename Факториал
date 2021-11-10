@@ -1,0 +1,23 @@
+using System;
+
+namespace _28._10_2_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("p =");
+            int p = Convert.ToInt32(Console.ReadLine());
+            int i = p;
+            int factorial = 1;
+            do
+            {
+                factorial *= i;
+                --i;
+            }
+            while (i > 1);
+            Console.WriteLine($"{p}! = {factorial}");
+            Console.ReadLine();
+        }
+    }
+}
