@@ -1,0 +1,27 @@
+using System;
+
+namespace _123
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {  
+            Console.WriteLine("Введите 3 числа");
+            double a = Convert.ToDouble(Console.ReadLine());
+            double b = Convert.ToDouble(Console.ReadLine());
+            double c = Convert.ToDouble(Console.ReadLine());
+            if ((a > b) & (a > c))
+            {
+                Console.WriteLine("Максимальное число = {0}", a);
+            }
+            else if ((b > c) & (b > a))
+            {
+                Console.WriteLine("Максимальное число = {0}", b);
+            }
+            else if ((c > a) & (c > b))
+            {
+                Console.WriteLine("Максимальное число = {0}", c);
+            }
+        }
+    }
+}
