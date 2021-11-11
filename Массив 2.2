@@ -1,0 +1,34 @@
+using System;
+
+namespace массив
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите элементы массива");
+            var array = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
+            int[] array_plus = new int[array.Length];
+            int[] array_minus = new int[array.Length];
+            Console.Write("\n" + "Массив с положительными элементами = ");
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > 0)
+                {
+                    array_plus[i] = array[i];
+                    Console.Write(array_plus[i] + " ");
+                }
+            }
+            Console.Write("\n" + "Массив с отрицательными элементами = ");
+            for (int k = 0; k < array.Length; k++)
+            {
+                if (array[k] < 0)
+                {
+                     array_minus[k] = array[k];
+                     Console.Write(array_minus[k] + " ");
+                }
+             }
+            Console.ReadLine();
+        }
+    }
+}
