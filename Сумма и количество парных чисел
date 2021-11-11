@@ -1,6 +1,6 @@
 using System;
 
-namespace _28._10_3_
+namespace sum
 {
     class Program
     {
