@@ -1,0 +1,37 @@
+using System;
+
+namespace массив
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          Console.WriteLine("Введите массив");
+            var array = Array.ConvertAll(Console.ReadLine().Split(' '), s => double.Parse(s));
+            double max = array[0];
+            double sum = 0;
+            double sr = 0;
+            Console.Write("Обратный массив = ");
+            for (int i = array.Length-1; i >= 0; i--)
+            {
+                Console.Write(array[i] + " ");
+                sum += array[i];
+                if (max < array[i])
+                {
+                    max = array[i];
+                }
+            }
+            sr = sum / array.Length;
+            Console.Write("\n" + $"Максимальный элемент массива = {max}");
+            Console.Write("\n" + "Массив где все нулевые элементы заменить на среднее арифметическое = ");
+            for (int k = 0; k < array.Length; k++)
+            {
+                if (array[k] == 0)
+                {
+                    array[k] = sr;
+                }
+                Console.Write(array[k] + " ");
+            }
+        }
+    }
+}
