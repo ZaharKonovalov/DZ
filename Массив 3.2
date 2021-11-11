@@ -1,0 +1,21 @@
+using System;
+
+namespace массив
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] t = new int[8] { 5, 10, 25, 39, 3, 2, 1, 339};
+            for (int i =0; i<t.Length; i++)
+            {
+                if (t[i] < 15)
+                {
+                    t[i] =t[i] * 2;
+                }
+                Console.Write(t[i] + " ");
+            }
+            Console.ReadKey();
+        }
+    }
+}
