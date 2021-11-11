@@ -1,0 +1,25 @@
+using System;
+
+namespace массив_2_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите массив");
+            var array = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
+            double min = array[0];
+            int index = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (min > array[i])
+                {
+                    min = array[i];
+                    index = i;
+                }
+            }
+            Console.Write($"Минимальный элемент массива = {min} " + "\n" + $"Индекс минимального элемента = {index}");
+            
+        }
+    }
+}
